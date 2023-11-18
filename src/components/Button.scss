@@ -1,0 +1,19 @@
+// src/components/Button.scss
+@import '../assets/styles/variables';
+
+.neu-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: $color-bg;
+  box-shadow: $shadow-outer;
+  color: $color-text;
+  font-family: $font-stack;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    box-shadow: $shadow-inner;
+  }
+  &:active {
+    box-shadow: $shadow-inner;
+  }
+}
