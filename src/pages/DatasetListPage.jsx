@@ -6,7 +6,7 @@ import Pagination from "../components/Pagination";
 const DatasetListPage = () => {
   const [datasets, setDatasets] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(4); // Adjust the number of items per page as needed
+  const [itemsPerPage] = useState(4);
 
   const { addToCart, removeFromCart, cartItems } = useContext(CartContext);
 

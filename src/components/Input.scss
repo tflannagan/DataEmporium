@@ -1,0 +1,14 @@
+// src/components/Input.scss
+@import '../assets/styles/variables';
+
+.neu-input {
+  padding: 10px;
+  border: none;
+  background-color: $color-bg;
+  box-shadow: $shadow-inner;
+  color: $color-text;
+  font-family: $font-stack;
+  &:focus {
+    box-shadow: $shadow-outer;
+  }
+}

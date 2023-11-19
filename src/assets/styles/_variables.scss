@@ -4,6 +4,6 @@ $color-text: #333;        // Primary text color
 $color-accent: #7c8ba1;   // Accent color for interactive elements
 
 $shadow-inner: inset 5px 5px 10px #a3b1c6, inset -5px -5px 10px #ffffff; // Inner shadow for embossed effect
-$shadow-outer: 5px 5px 10px #a3b1c6, -5px -5px 10px #ffffff; // Outer shadow for floating effect
+$shadow-outer: 5px 5px 10px #a3b1c6, -5px -5px 10px #ffffff;
 
-$font-stack: Tahoma, Geneva, Verdana, sans-serif; // Font stack
+$font-stack: 'Poppins', sans-serif;

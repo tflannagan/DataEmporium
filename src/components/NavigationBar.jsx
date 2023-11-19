@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { useContext } from "react";
-import "./NavigationBar.scss"; // Importing the SASS file
+import "./NavigationBar.scss";
 
 const NavigationBar = () => {
   const { cartCount } = useContext(CartContext);

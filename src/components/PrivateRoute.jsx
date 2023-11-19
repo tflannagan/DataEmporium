@@ -8,7 +8,6 @@ const PrivateRoute = ({ children }) => {
   const { user } = useContext(AuthContext);
 
   if (!user) {
-    // If there's no user, redirect to login page
     return <Navigate to="/login" />;
   }
 

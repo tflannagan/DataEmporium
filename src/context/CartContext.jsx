@@ -7,7 +7,8 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
-    setCartItems([...cartItems, item]);
+    const cartItem = { ...item, price: Number(item.price) };
+    setCartItems([...cartItems, cartItem]);
   };
 
   const removeFromCart = (itemId) => {
@@ -21,13 +22,11 @@ export const CartProvider = ({ children }) => {
     return total;
   };
 
-  // Call calculateTotalPrice() whenever you need the updated total
   const totalPrice = calculateTotalPrice();
 
   const checkout = () => {
-    // Implement checkout logic
     console.log("Proceeding to checkout with items:", cartItems);
-    // Clear the cart after checkout
+
     setCartItems([]);
   };
 

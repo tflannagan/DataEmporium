@@ -17,12 +17,11 @@ export const AuthProvider = ({ children }) => {
       username === fakeCredentials.username &&
       password === fakeCredentials.password
     ) {
-      // Simulate user data on successful login
       const fakeUser = { id: 1, name: "Ty", username: "admin" };
       setUser(fakeUser);
-      return true; // Login successful
+      return true;
     }
-    return false; // Login failed
+    return false;
   };
 
   const logout = () => {

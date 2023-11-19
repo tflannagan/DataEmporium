@@ -20,10 +20,13 @@ const LoginPage = () => {
   if (user) {
     return (
       <div className={`login-page ${user ? "logged-in" : ""}`}>
-        <img src={LOGO} alt="Logo" /> {/* Replace with your logo */}
+        <img className="login-img" src={LOGO} alt="Logo" />{" "}
+        {/* Replace with your logo */}
         <h1>You are logged in...</h1>
         <p>Happy to have you here, {user.name}!</p>
-        <button onClick={logout}>Sign out</button>
+        <button className="login-button" onClick={logout}>
+          Sign out
+        </button>
       </div>
     );
   }

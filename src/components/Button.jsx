@@ -1,4 +1,3 @@
-// src/components/Button.jsx
 import PropTypes from "prop-types";
 import "./Button.scss";
 

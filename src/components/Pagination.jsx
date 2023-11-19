@@ -30,7 +30,7 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
             <a
               href="#"
               onClick={(e) => {
-                e.preventDefault(); // Prevent the default anchor behavior
+                e.preventDefault();
                 paginate(number);
               }}
               className="page-link"
