@@ -15,6 +15,13 @@ This repository contains the source code for our e-commerce platform designed to
 
 **This project is for educational purposes, and therefore the data used in this application are ficticious.**
 
+## How To Use:
+
+- Sign in to use the Data Market 🛒
+  
+```USERNAME: test```
+```PASSWORD: password```
+
 ## Contributing
 
 This project is purely for educational purposes, but thank you for your contributions 🥰
