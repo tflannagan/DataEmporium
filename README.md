@@ -9,7 +9,8 @@ This repository contains the source code for our e-commerce platform designed to
 ## Features
 
 - **User-Friendly Interface**: Easy navigation and search functionality to find datasets quickly.
-- **Authorization and User Log In**: Reliable and secure transactions.
+- **Authorization and User Log In**: Functional sign in and sign out capabilities.
+- **Cart and Checkout**: Add the datasets to a cart and press checkout! (This project is for educational purposes, so all data is ficticious)
 
 ## Dataset Catalog 📚
 
