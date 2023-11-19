@@ -18,3 +18,5 @@ This repository contains the source code for our e-commerce platform designed to
 ## Contributing
 
 This project is purely for educational purposes, but thank you for your contributions 🥰
+
+## :computer: [Live Site](https://tflannagan.github.io/DataEmporium/)
