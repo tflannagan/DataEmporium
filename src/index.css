@@ -1,5 +1,5 @@
 :root {
-  font-family: "Smooch";
+  
   line-height: 1.5;
   font-weight: 400;
 
@@ -15,11 +15,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #dedffb;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #e5e7ff;
 }
 
 body {
@@ -31,25 +31,29 @@ body {
 }
 
 h1 {
-  font-size: 3.6em;
+  font-size: 2.6em;
   line-height: 1.1;
   letter-spacing: 2px;
+  margin: 0.7rem 0rem;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 0.8em;
-  font-size: 1em;
-  margin: 0rem 1.2rem;
+  padding: 0.6em 0.9em;
+  font-size: 0.7em;
+  margin: 0rem 0.5rem;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+ 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.25s;
 }
 button:hover {
   border-color: #ffffff;
+  transform: translateY(3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 button:focus,
 button:focus-visible {
@@ -60,18 +64,21 @@ button:focus-visible {
   align-self: center;
   justify-content: center;
   justify-self: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
 }
 
 .logo-img {
-  margin: 2rem 0rem;
+  margin: 1rem 0rem;
   
 }
 
-.dataset-list-page {
+/* .dataset-list-page {
 
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* @media (prefers-color-scheme: light) {
   :root {
@@ -85,3 +92,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+.scrolling-wrapper {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -21,7 +21,7 @@ export const mockDatasets = [
     id: 4,
     name: "Grok Dataset",
     description: "Dataset covering various aspects of topic C.",
-    price: "10,000",
+    price: "10000",
   },
   {
     id: 5,

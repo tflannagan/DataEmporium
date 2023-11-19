@@ -1,0 +1,38 @@
+// DatasetListPage.scss
+.dataset-list-container {
+  // display: grid;
+  // grid-template-columns: 1fr 2fr 1fr;
+  
+  .dataset-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+    
+   overflow-y: auto;
+    gap: 20px;
+    .dataset-card {
+     
+      // flex: 0 0 auto; // Prevent cards from shrinking
+      width: 300px;
+      height: 12rem; // Adjust card width as needed
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1.2rem;
+      margin: 0rem;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      h2 {
+        margin-top: 0;
+      }
+
+      // button {
+      
+      // }
+    }
+    .dataset-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
