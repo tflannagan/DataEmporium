@@ -1,11 +1,11 @@
-import NavigationBar from "../components/NavigationBar";
+import LOGO from "../assets/logo.png";
+import "../components/MainLayout.scss";
 
 const HomePage = () => {
   return (
-    <div>
-      <NavigationBar />
-
-      <h1>Welcome to the Dataset Marketplace</h1>
+    <div className="homepage">
+      <img className="logo-img" src={LOGO} alt="img" />
+      <h1>Data Emporium</h1>
     </div>
   );
 };

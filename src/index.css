@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Smooch";
   line-height: 1.5;
   font-weight: 400;
 
@@ -31,15 +31,17 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.6em;
   line-height: 1.1;
+  letter-spacing: 2px;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 0.8em;
   font-size: 1em;
+  margin: 0rem 1.2rem;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -47,14 +49,31 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #ffffff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+.homepage {
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.logo-img {
+  margin: 2rem 0rem;
+  
+}
+
+.dataset-list-page {
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -65,4 +84,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

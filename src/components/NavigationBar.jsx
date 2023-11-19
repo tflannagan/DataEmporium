@@ -1,23 +1,34 @@
 import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
+import { useContext } from "react";
 import "./NavigationBar.scss"; // Importing the SASS file
 
 const NavigationBar = () => {
+  const { cartCount } = useContext(CartContext);
   return (
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <span className="material-symbols-outlined">home</span>
+          </Link>
         </li>
         <li>
-          <Link to="/datasets">Datasets</Link>
+          <Link to="/datasets">
+            <span className="material-symbols-outlined">analytics</span>
+          </Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/cart">
+            <span className="material-symbols-outlined">shopping_cart</span>
+            {cartCount > 0 && <span>({cartCount})</span>}
+          </Link>
         </li>
         <li>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/login">
+            <span className="material-symbols-outlined">passkey</span>
+          </Link>
         </li>
-        {/* Add other navigation links as needed */}
       </ul>
     </nav>
   );

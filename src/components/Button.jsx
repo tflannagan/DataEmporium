@@ -1,5 +1,5 @@
 // src/components/Button.jsx
-
+import PropTypes from "prop-types";
 import "./Button.scss";
 
 const Button = ({ label, onClick }) => {
@@ -9,5 +9,8 @@ const Button = ({ label, onClick }) => {
     </button>
   );
 };
-
+Button.propTypes = {
+  label: PropTypes.node,
+  onClick: PropTypes.node,
+};
 export default Button;

@@ -1,0 +1,18 @@
+
+
+// MainLayout.scss
+.main-layout {
+  margin-left: 0px; // Should match the navbar width
+  padding: 5rem 8rem;
+  min-height: 75vh;
+  width: 85vw;
+  background-color: #f4f4f4; // Choose a suitable background color
+  border-radius: 0rem 1rem 1rem 0rem; // Rounded edges for the main container
+  box-sizing: border-box;
+  box-shadow:  -20px -20px 60px #bebebe,
+             20px 20px 60px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; // Adjust based on your content
+  flex-direction: column;
+}

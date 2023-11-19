@@ -1,49 +1,51 @@
-import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+// src/pages/LoginPage.jsx
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-// Import your components for inputs, buttons, etc.
+import LOGO from "../assets/logo.png";
 
 const LoginPage = () => {
+  const { user, login, logout } = useContext(AuthContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { login } = useContext(AuthContext);
-  const navigate = useNavigate();
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleLogin = () => {
     const success = login(username, password);
-    if (success) {
-      navigate("/dashboard");
-    } else {
+    if (!success) {
       setError("Invalid username or password");
     }
   };
 
+  // If the user is logged in, show a logged-in message and a logo
+  if (user) {
+    return (
+      <div className={`login-page ${user ? "logged-in" : ""}`}>
+        <img src={LOGO} alt="Logo" /> {/* Replace with your logo */}
+        <h1>You are logged in...</h1>
+        <p>Happy to have you here, {user.name}!</p>
+        <button onClick={logout}>Sign out</button>
+      </div>
+    );
+  }
+
+  // Login form for users who are not logged in
   return (
-    <div>
+    <div className={`login-page ${user ? "logged-in" : ""}`}>
       <h1>Login</h1>
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-      {/* Add more UI elements as per your design */}
+      <input
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button onClick={handleLogin}>Log in</button>
     </div>
   );
 };

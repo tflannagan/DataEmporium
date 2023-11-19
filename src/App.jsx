@@ -1,27 +1,38 @@
 // src/main.jsx or src/App.jsx
-import { AuthProvider } from "./context/AuthContext";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 import HomePage from "./pages/HomePage";
 import DatasetListPage from "./pages/DatasetListPage";
-import DatasetDetailPage from "./pages/DatasetDetailPage";
 import LoginPage from "./pages/LoginPage";
-import DashboardPage from "./pages/DashboardPage";
-// ... import other pages
+import NavigationBar from "./components/NavigationBar";
+import CartPage from "./pages/CartPage";
 
 const App = () => {
+  const { user } = useContext(AuthContext);
   return (
-    <AuthProvider>
-      <Router>
+    <Router>
+      <NavigationBar />
+      <div className="main-layout">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/datasets" element={<DatasetListPage />} />
-          <Route path="/datasets/:id" element={<DatasetDetailPage />} />
-
-          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/datasets"
+            element={user ? <DatasetListPage /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/cart"
+            element={user ? <CartPage /> : <Navigate to="/login" />}
+          />
         </Routes>
-      </Router>
-    </AuthProvider>
+      </div>
+    </Router>
   );
 };
 

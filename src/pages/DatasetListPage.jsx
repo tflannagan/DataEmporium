@@ -1,29 +1,39 @@
-// src/pages/DatasetListPage.jsx
-import { useState, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { fetchDatasets } from "../services/datasetService";
-// ... other imports
+import { CartContext } from "../context/CartContext";
 
 const DatasetListPage = () => {
   const [datasets, setDatasets] = useState([]);
+  const { addToCart, removeFromCart, cartItems } = useContext(CartContext);
 
   useEffect(() => {
     const getDatasets = async () => {
-      try {
-        const data = await fetchDatasets();
-        setDatasets(data);
-      } catch (error) {
-        // Handle error here, e.g., set an error state and display it
-      }
+      const data = await fetchDatasets();
+      setDatasets(data);
     };
 
     getDatasets();
   }, []);
 
+  const isInCart = (datasetId) =>
+    cartItems.some((item) => item.id === datasetId);
+
   return (
-    <div>
-      {/* Map over datasets and render list items */}
+    <div className="dataset-list-page">
+      <h1>Datasets</h1>
       {datasets.map((dataset) => (
-        <div key={dataset.id}>{/* Render dataset details */}</div>
+        <div key={dataset.id}>
+          <h2>{dataset.name}</h2>
+          <p>{dataset.description}</p>
+          <p>${dataset.price}</p>
+          {isInCart(dataset.id) ? (
+            <button onClick={() => removeFromCart(dataset.id)}>
+              Remove from Cart
+            </button>
+          ) : (
+            <button onClick={() => addToCart(dataset)}>Add to Cart</button>
+          )}
+        </div>
       ))}
     </div>
   );

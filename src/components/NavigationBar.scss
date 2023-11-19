@@ -1,23 +1,38 @@
-// NavigationBar.scss
 nav {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  
   ul {
+    display: flex;
+    height: 75vh;
+  flex-direction: column;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    border-radius: 1rem 0rem 0rem 1rem; // Rounded edges
 
     li {
       float: left;
-
+      width: 8vw; // Full width for vertical layout
+      height: 100%;
       a {
+        margin: 3rem 0rem 0rem 0rem;
         display: block;
         color: white;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        border-radius: 5px; // Rounded edges for each link
 
         &:hover {
+          color: #fff;
           background-color: #111;
         }
       }
