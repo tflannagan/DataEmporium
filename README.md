@@ -2,7 +2,7 @@
 
 Welcome to our GitHub repository for the e-commerce platform specializing in datasets for Machine Learning and Large Language Models (LLMs). Our mission is to provide high-quality, diverse, and relevant datasets to data scientists, researchers, and AI enthusiasts.
 
-**This project is for education purposes only**
+**This project is for educational purposes only.**
 
 https://github.com/tflannagan/DataEmporium/assets/50556963/a124376a-fa57-4f92-ad9f-a66e13c9dfe5
 
