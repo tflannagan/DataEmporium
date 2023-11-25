@@ -29,7 +29,7 @@ const CartPage = () => {
           </div>
         </>
       ) : (
-        <p className="empty-cart-message">Your cart is empty.</p>
+        <p className="empty-cart-message">Your cart is empty </p>
       )}
     </div>
   );

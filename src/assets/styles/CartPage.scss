@@ -1,8 +1,9 @@
 // CartPage.scss
 .cart-page {
+ 
   .cart-items {
     margin-bottom: 30px;
-
+    
     .cart-item {
       display: flex;
       justify-content: space-between;
@@ -44,6 +45,7 @@
   .empty-cart-message {
     text-align: center;
     font-size: 1.2em;
+   
   }
 
   .checkout {

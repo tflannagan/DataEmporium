@@ -16,7 +16,7 @@ const LoginPage = () => {
     }
   };
 
-  // If the user is logged in, show a logged-in message and a logo
+  // If user is logged in, show a login message and a logo
   if (user) {
     return (
       <div className={`login-page ${user ? "logged-in" : ""}`}>
@@ -31,7 +31,7 @@ const LoginPage = () => {
     );
   }
 
-  // Login form for users who are not logged in
+  // Login users who are not logged in
   return (
     <div className={`login-page ${user ? "logged-in" : ""}`}>
       <h1>Login</h1>

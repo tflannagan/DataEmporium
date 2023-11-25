@@ -1,9 +1,8 @@
-// src/context/AuthContext.js
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
 export const AuthContext = createContext();
 
-// Hardcoded credentials for demonstration
+// Hardcoded credentials
 const fakeCredentials = {
   username: "test",
   password: "password",
